@@ -1,0 +1,27 @@
+{
+  "name": "@strg-at/template-node",
+  "version": "0.1.0",
+  "description": "<add some usefull description>",
+  "scripts": {
+    "lint": "eslint \"src/**/*.ts\" --ignore-pattern \"src/**/*.spec.ts\"",
+    "lint:fix": "eslint \"src/**/*.ts\" --ignore-pattern \"src/**/*.spec.ts\" --fix"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "7.18.0",
+    "eslint": "8.57.1",
+    "eslint-plugin-jsdoc": "50.4.3"
+  },
+  "homepage": "https://github.com/strg-at/template-node#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strg-at/template-node.git"
+  },
+  "keywords": [],
+  "author": "STRG.",
+  "license": "SEE LICENSE IN LICENSE",
+  "maintainers": []
+}
