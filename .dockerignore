@@ -1,0 +1,41 @@
+# Ignore everything
+*
+
+# Allow files and directories
+!/.storybook
+!/public
+!/src
+!.eslintrc.cjs
+!.gitignore
+!.markdownlint.yaml
+!.npmrc
+!.prettierignore
+!.prettierrc.js
+!.yamllint.yaml
+!auto-imports.d.ts
+!cypress.config.ts
+!env.d.ts
+!index.html
+!LICENSE
+!package-lock.json
+!package.json
+!README.md
+!tsconfig.app.json
+!tsconfig.json
+!tsconfig.node.json
+!tsconfig.vitest.json
+!vite.config.mts
+!vitest.config.ts
+!vitest.globals.ts
+!vitest.mock-apollo.ts
+!vitest.mock-i18n.ts
+!eslint.config.mjs
+
+# Ignore unnecessary files inside allowed directories
+# This should go after the allowed directories
+**/*.log
+**/.DS_Store
+**/Thumbs.db
+
+# Ignore db-migrate database.json if present
+/resources/configuration.yaml
