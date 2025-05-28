@@ -1,4 +1,4 @@
-import '../assets/main.css'
+import '@/assets/main.css'
 import HelloWorld from './HelloWorld.vue'
 import type { Meta, StoryObj } from '@storybook/vue3'
 
