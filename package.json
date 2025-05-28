@@ -16,6 +16,7 @@
     "test:coverage": "vitest run --coverage",
     "test:unit": "vitest",
     "test:watch": "vitest --watch",
+    "test:update": "vitest -u",
     "test": "npm run test:unit",
     "type-check": "vue-tsc --build"
   },

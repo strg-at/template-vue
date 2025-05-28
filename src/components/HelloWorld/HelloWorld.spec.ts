@@ -8,4 +8,9 @@ describe('HelloWorld', () => {
     const wrapper = mount(HelloWorld, { props: { msg: 'Hello Vitest' } })
     expect(wrapper.text()).toContain('Hello Vitest')
   })
+
+  it('matches snapshot', () => {
+    const wrapper = mount(HelloWorld, { props: { msg: 'Hello Vitest' } })
+    expect(wrapper.html()).toMatchSnapshot()
+  })
 })

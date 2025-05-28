@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`HelloWorld > matches snapshot 1`] = `
+"<div data-v-1f28467c="" class="greetings">
+  <h1 data-v-1f28467c="" class="green">Hello Vitest</h1>
+  <h3 data-v-1f28467c=""> You've successfully created a project with <a data-v-1f28467c="" href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> + <a data-v-1f28467c="" href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>. What's next? </h3>
+</div>"
+`;

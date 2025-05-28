@@ -31,7 +31,6 @@ tasks:
           --workdir=/app \
           -e NPM_CONFIG_CACHE=/tmp/.npm \
           -e HOME=/tmp \
-          --user root:root \
           --network=host \
           node:{{.VERSION}}-alpine \
             npx {{.COMMAND}}
