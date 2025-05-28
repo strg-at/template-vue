@@ -13,7 +13,7 @@ tasks:
   command:
     internal: true
     vars:
-      COMMAND: '{{default "install" .COMMAND}}'
+      COMMAND: '{{default "run" .COMMAND}}'
       VERSION:
         sh: cat {{.PROJECT_DIR}}/.nvmrc
     dir: "{{.PROJECT_DIR}}"
@@ -142,6 +142,13 @@ tasks:
     cmds:
       - task: command
         vars: { COMMAND: "run test:update" }
+
+  test:coverage:
+    desc: Run tests and generate coverage report.
+    interactive: true
+    cmds:
+      - task: command
+        vars: { COMMAND: "run test:coverage" }
 
   check-and-test:
     desc: Run lint, type-check and tests.

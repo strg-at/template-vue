@@ -147,3 +147,5 @@ lib
 
 # resources configuration
 /resources/configuration.yaml
+
+*storybook.log
