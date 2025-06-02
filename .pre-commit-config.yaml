@@ -1,8 +1,8 @@
 ---
 fail_fast: false
 default_stages:
-  - commit
-  - push
+  - pre-commit
+  - pre-push
 exclude: (.*\.snap)|(auto-imports\.d\.ts)|(components\.d\.ts)|(^.*\.svg$)
 
 repos:
@@ -38,6 +38,7 @@ repos:
       - id: trailing-whitespace
         args:
           - --markdown-linebreak-ext=md
+      - id: no-commit-to-branch
 
   - repo: https://github.com/adrienverge/yamllint
     rev: v1.37.1
@@ -83,7 +84,7 @@ repos:
     hooks:
       - id: forbid-secrets
 
-  - repo: https://github.com/zricethezav/gitleaks
+  - repo: https://github.com/gitleaks/gitleaks
     rev: v8.25.1
     hooks:
       - id: gitleaks
