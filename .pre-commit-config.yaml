@@ -1,8 +1,8 @@
 ---
 fail_fast: false
 default_stages:
-  - commit
-  - push
+  - pre-commit
+  - pre-push
 exclude: (.*\.snap)|(auto-imports\.d\.ts)|(components\.d\.ts)|(^.*\.svg$)
 
 repos:
