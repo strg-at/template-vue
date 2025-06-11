@@ -1,0 +1,36 @@
+---
+version: 3
+
+vars:
+  USER_ID:
+    sh: id -u
+  GROUP_ID:
+    sh: id -g
+  HOME:
+    sh: echo $HOME
+
+tasks:
+  default:
+    desc: Run arbitrary `npx` commands in a Docker container.
+    summary: |
+      Run an arbitrary `npx` command. Examples:
+      * `task npx -- create-react-app my-app`
+      * `task npx -- eslint .`
+    vars:
+      COMMAND: '{{default "" .CLI_ARGS}}'
+      VERSION:
+        sh: cat .nvmrc
+    cmds:
+      - |-
+        docker run --rm -i \
+          -v $PWD:/app \
+          -v /etc/group:/etc/group:ro \
+          -v /etc/passwd:/etc/passwd:ro \
+          -v /etc/shadow:/etc/shadow:ro \
+          -v {{.HOME}}/.npm:/tmp/.npm \
+          --workdir=/app \
+          -e NPM_CONFIG_CACHE=/tmp/.npm \
+          -e HOME=/tmp \
+          --network=host \
+          node:{{.VERSION}}-alpine \
+            npx {{.COMMAND}}
